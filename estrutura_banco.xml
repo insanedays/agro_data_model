@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: https://sql.toad.cz/ -->
+<sql>
+<datatypes db="mysql">
+	<group label="Numeric" color="rgb(238,238,170)">
+		<type label="Integer" length="0" sql="INTEGER" quote=""/>
+	 	<type label="TINYINT" length="0" sql="TINYINT" quote=""/>
+	 	<type label="SMALLINT" length="0" sql="SMALLINT" quote=""/>
+	 	<type label="MEDIUMINT" length="0" sql="MEDIUMINT" quote=""/>
+	 	<type label="INT" length="0" sql="INT" quote=""/>
+		<type label="BIGINT" length="0" sql="BIGINT" quote=""/>
+		<type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
+		<type label="Single precision" length="0" sql="FLOAT" quote=""/>
+		<type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
+	</group>
+
+	<group label="Character" color="rgb(255,200,200)">
+		<type label="Char" length="1" sql="CHAR" quote="'"/>
+		<type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+		<type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
+		<type label="Binary" length="1" sql="BINARY" quote="'"/>
+		<type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
+		<type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
+	</group>
+
+	<group label="Date &amp; Time" color="rgb(200,255,200)">
+		<type label="Date" length="0" sql="DATE" quote="'"/>
+		<type label="Time" length="0" sql="TIME" quote="'"/>
+		<type label="Datetime" length="0" sql="DATETIME" quote="'"/>
+		<type label="Year" length="0" sql="YEAR" quote=""/>
+		<type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>
+	</group>
+	
+	<group label="Miscellaneous" color="rgb(200,200,255)">
+		<type label="ENUM" length="1" sql="ENUM" quote=""/>
+		<type label="SET" length="1" sql="SET" quote=""/>
+		<type label="Bit" length="0" sql="bit" quote=""/>
+	</group>
+</datatypes><table x="537" y="123" name="talhao">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<comment>Identificador único ao talhão (chave primária), ele é autoincremental.</comment>
+</row>
+<row name="nome" null="0" autoincrement="0">
+<datatype>VARCHAR(60)</datatype>
+</row>
+<row name="hectares" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<row name="descricao" null="1" autoincrement="0">
+<datatype>VARCHAR(255)</datatype>
+<default>NULL</default></row>
+<row name="centroide_latitude" null="0" autoincrement="0">
+<datatype>DOUBLE</datatype>
+</row>
+<row name="centroide_longitude" null="0" autoincrement="0">
+<datatype>DOUBLE</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>tabela de informacoes do talhao da fazenda</comment>
+</table>
+<table x="785" y="103" name="area">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="id_talhao" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="talhao" row="id" />
+</row>
+<row name="nome" null="0" autoincrement="0">
+<datatype>VARCHAR(60)</datatype>
+</row>
+<row name="centroide_latitude" null="0" autoincrement="0">
+<datatype>DOUBLE</datatype>
+</row>
+<row name="centoride_longitude" null="0" autoincrement="0">
+<datatype>DOUBLE</datatype>
+</row>
+<row name="tamanho" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<row name="unidade_de_medida" null="0" autoincrement="0">
+<datatype>SET</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>traz detalhes sobre as area dentro do talhao</comment>
+</table>
+<table x="257" y="417" name="sensor">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="id_talhao" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="talhao" row="id" />
+</row>
+<row name="nome" null="0" autoincrement="0">
+<datatype>VARCHAR(60)</datatype>
+</row>
+<row name="unidade_de_medida" null="0" autoincrement="0">
+<datatype>SET</datatype>
+</row>
+<row name="tipo" null="0" autoincrement="0">
+<datatype>SET</datatype>
+</row>
+<row name="profundidade_instalada" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<row name="instalacao_latitude" null="0" autoincrement="0">
+<datatype>DOUBLE</datatype>
+</row>
+<row name="instalacao_longitude" null="0" autoincrement="0">
+<datatype>DOUBLE</datatype>
+</row>
+<row name="area_de_alcance" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="49" y="445" name="leitura">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="id_sensor" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="sensor" row="id" />
+</row>
+<row name="data_hora" null="0" autoincrement="0">
+<datatype>DATETIME</datatype>
+</row>
+<row name="valor" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1076" y="127" name="acoes">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="id_area" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="area" row="id" />
+</row>
+<row name="id_produto" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="manejo" row="id" />
+</row>
+<row name="data_hora" null="0" autoincrement="0">
+<datatype>DATETIME</datatype>
+</row>
+<row name="quantidade_aplicada" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1348" y="172" name="manejo">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="nome" null="0" autoincrement="0">
+<datatype>VARCHAR(60)</datatype>
+</row>
+<row name="tipo" null="0" autoincrement="0">
+<datatype>SET(60)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="147" y="124" name="safra">
+<row name="id" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+<comment>Identificador unico da safra, pk</comment>
+</row>
+<row name="id_talhao" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="talhao" row="id" />
+</row>
+<row name="cultura" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<row name="densidade_de_plantio" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<row name="area_de_plantio" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<row name="data_inicio_plantio" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<row name="data_fim_plantio" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default></row>
+<row name="data_emergencia" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>tabela contrando informacao da safra</comment>
+</table>
+</sql>
