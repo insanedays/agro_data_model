@@ -77,14 +77,14 @@ Este projeto visa registrar informações de manejos de insumos e leituras reali
 | Produto ↔ Ações         | Produto    | Ação         | 1:0    | 1:N    |
 
 ## Explicação das Cardinalidades
-Talhao ↔ Sensor: Um talhão pode não ter não ter sensores ou ter muitos sensores. Um sensor só pode existir se estiver associado a um talhão.
+Talhao ↔ Sensor: Um talhão pode não ter sensores ou ter muitos sensores. Um sensor só pode existir se estiver associado a um talhão.
 
 Sensor ↔ Leitura: Um sensor pode não ter nenhuma leitura ou pode ter muitas. Uma leitura não pode existir sem estar associada a um sensor e só pode ter um sensor. 
 
 Talhão ↔ Safra: Um talhão pode não ter nenhuma ou ter muitas safras. Uma safra só pode existir se estiver associada a um talhão e só pode estar associada a um.
 
-Talhão ↔ Área: Um talhão pode não ter nenhuma area ou ter muitas áreas, enquanto uma área deve ter (1) talhão. 
+Talhão ↔ Área: Um talhão pode não ter nenhuma area ou ter muitas áreas, enquanto uma área deve ter talhão. 
 
-Área ↔ Ações: Uma área pode não possuir nenhuma ação ou ter muitas  ações, enquanto uma ação pode acontecer em uma área (1) ou em muitas áreas.
+Área ↔ Ações: Uma área pode não possuir nenhuma ação ou ter muitas  ações, enquanto uma ação pode acontecer em uma área ou em muitas áreas.
 
 Produto ↔ Ações: Um produto deve estar associado pode não ter ações ou ter muitas  alções, enquanto uma ação só pede ter um produto (1).
