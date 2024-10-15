@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<<?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
 <!-- Active URL: https://sql.toad.cz/ -->
 <sql>
@@ -83,14 +83,14 @@
 <datatype>DECIMAL</datatype>
 </row>
 <row name="unidade_de_medida" null="0" autoincrement="0">
-<datatype>SET</datatype>
+<datatype>VARCHAR(10)</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 <comment>traz detalhes sobre as area dentro do talhao</comment>
 </table>
-<table x="257" y="417" name="sensor">
+<table x="474" y="399" name="sensor">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER</datatype>
 </row>
@@ -102,10 +102,10 @@
 <datatype>VARCHAR(60)</datatype>
 </row>
 <row name="unidade_de_medida" null="0" autoincrement="0">
-<datatype>SET</datatype>
+<datatype>VARCHAR(10)</datatype>
 </row>
 <row name="tipo" null="0" autoincrement="0">
-<datatype>SET</datatype>
+<datatype>VARCHAR(20)</datatype>
 </row>
 <row name="profundidade_instalada" null="0" autoincrement="0">
 <datatype>DECIMAL</datatype>
@@ -123,7 +123,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="49" y="445" name="leitura">
+<table x="117" y="448" name="leitura">
 <row name="id" null="0" autoincrement="1">
 <datatype>INTEGER</datatype>
 </row>
@@ -171,7 +171,7 @@
 <datatype>VARCHAR(60)</datatype>
 </row>
 <row name="tipo" null="0" autoincrement="0">
-<datatype>SET(60)</datatype>
+<datatype>VARCHAR(20)</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -207,6 +207,6 @@
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
-<comment>tabela contrando informacao da safra</comment>
+<comment>tabela com informacao da safra</comment>
 </table>
 </sql>
