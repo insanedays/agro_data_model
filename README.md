@@ -1,4 +1,4 @@
-# Projeto de banco de dados para registro de Manejos de insumos e leituras de sensores
+# Projeto de banco de dados para registro de manejos de insumos e leituras de sensores
 
 ## Descrição
 Este projeto visa a criação de um sistema de banco de dados completo para gerenciar e registrar informações sobre os manejos de insumos e as leituras realizadas por sensores em áreas específicas dentro dos talhões. O sistema permitirá o monitoramento preciso e eficiente das condições do solo e outros parâmetros vitais para otimizar as práticas agrícolas.
