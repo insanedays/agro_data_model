@@ -16,14 +16,14 @@ Este projeto visa registrar informações de manejos de insumos e leituras reali
 - **centroide_latitude** (DOUBLE) - Latitude do centro da área.
 - **centroide_longitude** (DOUBLE) - Longitude do centro da área.
 - **tamanho** (DECIMAL) - Tamanho da área cadastrada
-- **unidade_de_medida** (SET) - Informa se o tamanho está cadastrado em metros quadrados ou hectares.
+- **unidade_de_medida** (VARCHAR(10)) - Informa se o tamanho está cadastrado em metros quadrados ou hectares.
 
 ### 2. Sensor
 - **id** (INTEGER) - Identificador único do sensor (chave primária), ele é autoincremental.
 - **id_talhao** (INTEGER) - Chave estrangeira que referencia a tabela Área.
 - **nome** (VARCHAR(60)) - Nome criado para usuário para facilitar a identificação do sensor.
-- **unidade_de_medida** (SET) - Unidade de medida usada pelo sensor, cada tipo de sensor tem uma unidade padrão.
-- **tipo** (SET) - Diz o tipo do sensor. Sensor de PH, sensor de umidade, sensor de potássio, sensor de fósforo.
+- **unidade_de_medida** (VARCHAR(10)) - Unidade de medida usada pelo sensor, cada tipo de sensor tem uma unidade padrão.
+- **tipo** (VARCHAR(20)) - Diz o tipo do sensor. Sensor de PH, sensor de umidade, sensor de potássio, sensor de fósforo.
 - **profundidade_instalada** (DECIMAL) - Profundidade em que o sensor foi instalado.
 - **instalacao_latitude** (DOUBLE) - Latitude da instalação do sensor.
 - **instalacao_longitude** (DOUBLE) - Longitude da instalação do sensor.
@@ -63,7 +63,7 @@ Este projeto visa registrar informações de manejos de insumos e leituras reali
 ### 7. Manejo
 - **id** (INTEGER) - Identificador único do produto (chave primária).
 - **nome** (VARCHAR(60)) - Nome do produto utilizado no manejo (ex: água, fertilizante específico, produto de correção).
-- **tipo** (SET) - Informa o tipo do produto, irrigação, aplicação de fertilizantes, correção de solo.
+- **tipo** (VARCHAR(20)) - Informa o tipo do produto, irrigação, aplicação de fertilizantes, correção de solo.
 
 ## Tabela de Cardinalidade
 
