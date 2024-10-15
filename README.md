@@ -1,7 +1,9 @@
 # Projeto de Monitoramento Agrícola
 
 ## Descrição
-Este projeto visa registrar informações de manejos de insumos e leituras realizadas por sensores dentro de areas dos talhoes.
+Este projeto visa a criação de um sistema de banco de dados completo para gerenciar e registrar informações sobre os manejos de insumos e as leituras realizadas por sensores em áreas específicas dentro dos talhões. O sistema permitirá o monitoramento preciso e eficiente das condições do solo e outros parâmetros vitais para otimizar as práticas agrícolas.
+
+
 
 # Diagrama Entidade-Relacionamento (DER)
 ![alt text](diagrama_entidade_relacionamento.png)
