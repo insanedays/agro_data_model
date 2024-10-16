@@ -3,7 +3,7 @@
 ## Descrição
 Este projeto visa a criação de um sistema de banco de dados completo para gerenciar e registrar informações sobre os manejos de insumos e as leituras realizadas por sensores em áreas específicas dentro dos talhões. O sistema permitirá o monitoramento preciso e eficiente das condições do solo e outros parâmetros vitais para otimizar as práticas agrícolas.
 
-# Aquivos contidos
+## Aquivos contidos
 - .xml: Arquivo XML criado a partir do SQL Desing, contendo os dados estruturados para auxiliar nas configurações.
 - .sql: Arquivo SQL contém o script de criações e definições das tabelas do banco de dados.
 - .png: Arquivo contendo uma imagem do Diagrama Entidade-Relacionamento (DER) do projeto, que visualiza as tabelas, suas relações e as principais propriedades dos dados.
